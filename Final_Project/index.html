@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Todo List</title>
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+        <img src="assets/logo.svg" alt="logo" class="header-logo">
+        <div class="header-counter-wrapper">
+            <img src="assets/notes_blue.svg" alt="notes" class="header-logo">
+            <p class="counter-text">Всего заметок: <span class="counter">0</span></p>
+        </div>
+    </header>
+    
+    <main>
+        <form class="form">
+            <div class="note-wrapper">
+                <div class="note-title-wrapper">
+                    <div><h2>Название заметки</h2>
+                        <input type="text" name="" id="note-title" class="note-title"
+                               placeholder="Заголовок новой заметки..."></div>
+                    <span class="message-box"></span>
+                </div>
+                
+                <div class="text-and-color-picker-wrapper">
+                    <div class="note-content-wrapper">
+                        <h2>Содержание новой заметки</h2>
+                        <textarea name="" id="note-content" class="note-content" maxlength="200"
+                                  placeholder="Новая заметка..."></textarea>
+                    </div>
+                    <div class="color-picker-btn-wrapper">
+                        <h2 class="color-picker-title">Выберите цвет заметки</h2>
+                        <ul class="color-picker-list">
+                            <li class="color">
+                                <div class="circle yellow checked"></div>
+                            </li>
+                            <li class="color">
+                                <div class="circle green"></div>
+                            </li>
+                            <li class="color">
+                                <div class="circle blue"></div>
+                            </li>
+                            <li class="color">
+                                <div class="circle red"></div>
+                            </li>
+                            <li class="color">
+                                <div class="circle violet"></div>
+                            </li>
+                        </ul>
+                        <button type="button" class="add-note-btn">
+                            <img src="assets/add_btn_plus.svg" alt="">Добавить заметку
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
+        
+        <div class="filter-box"></div>
+        
+        
+        <div class="checkbox-container">
+            <input type="checkbox" name="checkbox" id="checkbox" class="checkbox">
+            <label for="checkbox" class="showFavourites">Показать только избранные заметки</label>
+        </div>
+        
+        <ul class="notesContainer">
+
+        </ul>
+    
+    
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
