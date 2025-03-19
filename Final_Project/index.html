@@ -40,24 +40,26 @@
                                   placeholder="Новая заметка..."></textarea>
                     </div>
                     <div class="color-picker-btn-wrapper">
-                        <h2 class="color-picker-title">Выберите цвет заметки</h2>
-                        <ul class="color-picker-list">
-                            <li class="color">
-                                <div class="circle yellow checked"></div>
-                            </li>
-                            <li class="color">
-                                <div class="circle green"></div>
-                            </li>
-                            <li class="color">
-                                <div class="circle blue"></div>
-                            </li>
-                            <li class="color">
-                                <div class="circle red"></div>
-                            </li>
-                            <li class="color">
-                                <div class="circle violet"></div>
-                            </li>
-                        </ul>
+                        <fieldset class="fieldset">
+                            <legend class="color-picker-title">Выберите цвет заметки</legend>
+                            <ul class="radio-list">
+                                <li>
+                                    <input checked class="radio" type="radio" name="color" value="#F3DB7D" aria-label="yellow" />
+                                </li>
+                                <li>
+                                    <input class="radio" type="radio" name="color" value="#F37D7D" aria-label="red" />
+                                </li>
+                                <li>
+                                    <input class="radio" type="radio" name="color" value="#C2F37D" aria-label="green" />
+                                </li>
+                                <li>
+                                    <input class="radio" type="radio" name="color" value="#7DE1F3" aria-label="blue" />
+                                </li>
+                                <li>
+                                    <input class="radio" type="radio" name="color" value="#E77DF3" aria-label="purple" />
+                                </li>
+                            </ul>
+                        </fieldset>
                         <button type="button" class="add-note-btn">
                             <img src="assets/add_btn_plus.svg" alt="">Добавить заметку
                         </button>
@@ -67,7 +69,6 @@
         </form>
         
         
-        <div class="filter-box"></div>
         
         
         <div class="checkbox-container">
@@ -76,10 +77,12 @@
         </div>
         
         <ul class="notesContainer">
-
         </ul>
     
-    
+        <ul class="favouriteNotes"></ul>
+
+
+
     </main>
 </div>
 

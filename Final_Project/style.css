@@ -120,43 +120,62 @@
     max-length: 200;
 }
 
-.color-picker-list {
+.color-picker-btn-wrapper {
     display: flex;
-    gap: 8px;
-    list-style: none;
-    margin-bottom: 12px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.circle {
+fieldset {
+    all: unset;
+}
+
+legend {
+    all: unset
+}
+
+.radio-list {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    padding-left: 10px;
+    padding-top: 8px;
+}
+
+.radio {
+    appearance: none;
+    display: inline-block;
     width: 24px;
     height: 24px;
-    border-radius: 100%;
-    margin: 6px;
+    border-radius: 50%;
 }
 
-.circle.checked {
-    border: 1px solid blue;
+.radio[value="#F37D7D"] {
+    background-color: #F37D7D;
 }
 
-.yellow {
-    background-color: #f3db7d;
+.radio[value="#C2F37D"] {
+    background-color: #C2F37D;
 }
 
-.green {
-    background-color: #c2f37d;
+.radio[value="#7DE1F3"] {
+    background-color: #7DE1F3;
 }
 
-.blue {
-    background-color: #7de1f3;
+.radio[value="#F3DB7D"] {
+    background-color: #F3DB7D;
 }
 
-.red {
-    background-color: #f37d7d;
+.radio[value="#E77DF3"] {
+    background-color: #E77DF3;
 }
 
-.violet {
-    background-color: #e77df3;
+.radio:checked {
+    border-color: white;
+    box-shadow: 0 0 0 3px white, /* Внутренняя обводка для создания промежутка */
+    0 0 0 4.5px #007BFF; /* Внешняя обводка */
 }
+
 .add-note-btn {
     border-radius: 10px;
     padding: 6px 24px;
@@ -227,14 +246,12 @@
     align-items: center;
     padding: 12px;
     width: 100%;
-    background-color: #f3db7d;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    background: #f3db7d;
     color: #292515;
 }
 
